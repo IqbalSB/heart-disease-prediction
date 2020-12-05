@@ -4,10 +4,28 @@
     <title>Prediction </title>
 <link rel="shortcut icon" type="image/png" href="static/images/icon.png"/>
 <style>
-* {
+  *{
   box-sizing: border-box;
 }
-
+.header{
+  overflow: hidden;
+  background-color: rgb(32 32 27);
+  padding: 20px 10px;
+  font-style: oblique;
+  font-size: 40px;
+  font-weight: bold;
+  font-variant: small-caps;
+  color: white;
+}
+.footer{
+  overflow: hidden;
+  background-color: #000;
+  padding: 20px 10px;
+  font-size: 20px;
+  margin-top: 2px;
+  font-variant: small-caps;
+  color: white;
+}
 input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
@@ -21,19 +39,18 @@ label {
   font-style: normal;
    font-size: 20px;
    font-family: Georgia;
-
-
-   
+   color: #ffffffd9;
+    font-weight: 500;  
 }
 
 
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #17B9EA;
 }
 
 .container {
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-image: url("https://i.snipboard.io/aGScRu.jpg");
   padding: 10px;
 }
 
@@ -64,32 +81,38 @@ input[type=submit]:hover {
   }
 }
 input[type=button], input[type=submit], input[type=reset] {
-  background-color: #4CAF50;
+  background-color: #FD4C5A;
   border: none;
   color: white;
   padding: 16px 32px;
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
+  border-radius: 5px;
 }
-h2.oblique {
-  font-style: oblique;
- font-size: 40px;
- font-weight: bold;
-font-variant: small-caps;
+div.opacity{
+   top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: .5s ease;
+  background-color: rgba(0,0,0,.62);
+  overflow:hidden;
+  border-radius: 5px;
 }
 </style>
 </head>
 <body>
-
-<h2 class="oblique">Heart disease prediction form</h2>
+<center>
+<div class="header">Heart disease prediction form</div>
  <div id="meta_para">
-      <p >The data is taken from a UCI Heart disease dataset library. The trained machine learning model is made available to predict the occurence of heart disease
-	  . The model is <b>85%</b>(approx) accurate. Enjoy! <br>PS: the site is still under construction.</p>
+      <p style="font-size: 20px;" >The data is taken from a UCI Heart disease dataset library. The trained machine learning model is made available to predict the occurence of heart disease
+	  . The model is <b>85%</b>(approx) accurate. Enjoy!</p>
       <p><b>Instruction</b>: fill the form to predict whether the chance of heart disease</p>
     </div>
 <div class="container">
-  <form action="/result" method="POST">
+  <div class="opacity">
+    <form action="/result" method="POST">
   <div class="row">
     <div class="col-25">
      <label for="age">Age</label>
@@ -246,6 +269,8 @@ font-variant: small-caps;
  
   </form>
 </div>
-
+</div>
+<div class="footer">DEVELOPED BY: IQBAL SINGH, DAKSH SHARMA, DILPREET KAUR, SHIV MURAT VERMA</div>
+</center>
 </body>
 </html>
